@@ -57,9 +57,9 @@ void loop() {
 void controllerMotorConverter(controller){
   // pygame controllers use -1 to 1 value, and the motor recieves value from -255 to 255, so we need to convert them
 
-  c_stabilizer = 0.5 // how much we want to slow it down
+  c_stabilizer = 0.5; // how much we want to slow it down
 
-  return controller * 250 * c_stabilizer
+  return controller * 250 * c_stabilizer;
 }
 
 void setMotors(forward, turn){
