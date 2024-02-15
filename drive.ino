@@ -48,7 +48,9 @@ void loop() {
       readthis = (char)Serial.read();
 
     // gets values from two axis from the controller. idk how they are doing that so i will do that so i'm just including this comment
-    // make sure to multiple the forward axis by 0.6 and the turn axis by .3 so that it never goes above 255
+
+    forward = forward * .6;  // so it doesn't go above 255
+    turn = turn * .3;        // so it doesn't go above 255
     
     set motors(controllerMotorConverter(forward), controllerMotorConverter(turn));
     }
